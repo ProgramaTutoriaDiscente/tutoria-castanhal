@@ -2,6 +2,7 @@ import './globals.css'
 import type { Metadata } from 'next'
 import { Inter } from 'next/font/google'
 import { cn } from '@/lib/utils'
+import { Navbar } from '@/components/nav-bar/nav-bar'
 
 const inter = Inter({ subsets: ['latin'] })
 
@@ -19,7 +20,7 @@ export default function RootLayout({
     <html lang="pt-BR" className="h-full">
       <body className={cn('relative h-full antialiased', inter.className)}>
         <main className="relative flex min-h-screen flex-col">
-          {/* TODO: Navbar */}
+          <Navbar />
           <div className="flex-1 flex-grow">{children}</div>
           {/* TODO: Footer */}
         </main>
