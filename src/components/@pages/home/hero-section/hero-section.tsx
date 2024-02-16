@@ -8,7 +8,7 @@ export function HeroSection() {
     <>
       <MaxWidthWrapper>
         <div className="two-cols">
-          <div className="flex flex-col justify-center gap-6">
+          <div className="col-y-center gap-6">
             <h2 className="text-5xl font-bold">Programa de tutoria discente</h2>
             <p className="text-lg">
               Fornecemos suporte personalizado e workshops para auxiliá-lo na

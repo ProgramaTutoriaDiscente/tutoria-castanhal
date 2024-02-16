@@ -1,4 +1,5 @@
 import { HeroSection } from '@/components/@pages/home/hero-section/hero-section'
+import { LayoutSection } from '@/components/@pages/home/layout-section/layout-section'
 
 export default function Home() {
   return (
@@ -8,6 +9,7 @@ export default function Home() {
       {/* TODO: Last News Section */}
 
       {/* TODO: Layout Section */}
+      <LayoutSection />
     </>
   )
 }
