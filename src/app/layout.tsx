@@ -3,6 +3,7 @@ import type { Metadata } from 'next'
 import { Inter } from 'next/font/google'
 import { cn } from '@/lib/utils'
 import { Navbar } from '@/components/nav-bar/nav-bar'
+import { Footer } from '@/components/footer/footer'
 
 const inter = Inter({ subsets: ['latin'] })
 
@@ -23,6 +24,7 @@ export default function RootLayout({
           <Navbar />
           <div className="flex-1 flex-grow">{children}</div>
           {/* TODO: Footer */}
+          <Footer />
         </main>
       </body>
     </html>

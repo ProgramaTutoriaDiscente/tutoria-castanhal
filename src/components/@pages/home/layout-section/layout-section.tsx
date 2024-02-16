@@ -11,7 +11,7 @@ export function LayoutSection() {
             width={616}
             height={640}
             alt="Imagem ilustrativa"
-            className="h-full"
+            className="h-[640px]"
           />
           <div className="col-y-center gap-4">
             <span className=" font-semibold">Supere</span>
