@@ -1,4 +1,4 @@
-import { MaxWidthWrapper } from '../shared/max-width-wrapper'
+import { Section } from '../section/section'
 
 interface PageHeaderProps {
   title: string
@@ -6,13 +6,11 @@ interface PageHeaderProps {
 }
 export function PageHeader({ title, description }: PageHeaderProps) {
   return (
-    <div className="border-b-2 border-black">
-      <MaxWidthWrapper>
-        <div className="space-y-6 py-20 text-center">
-          <h2 className="text-5xl font-bold">{title}</h2>
-          <p className="text-lg">{description}</p>
-        </div>
-      </MaxWidthWrapper>
-    </div>
+    <Section className="border-b-2 border-black">
+      <div className="space-y-6 py-20 text-center">
+        <h2 className="text-5xl font-bold">{title}</h2>
+        <p className="text-lg">{description}</p>
+      </div>
+    </Section>
   )
 }
