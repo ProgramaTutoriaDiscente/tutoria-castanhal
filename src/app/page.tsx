@@ -1,5 +1,5 @@
-import { HeroSection } from '@/components/@pages/home/hero-section/hero-section'
-import { LayoutSection } from '@/components/@pages/home/layout-section/layout-section'
+import { HeroSection } from '@/components/@pages/home/hero-section'
+import { LayoutSection } from '@/components/@pages/home/layout-section'
 
 export default function Home() {
   return (

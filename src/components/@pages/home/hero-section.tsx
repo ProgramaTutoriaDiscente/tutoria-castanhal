@@ -8,9 +8,9 @@ export function HeroSection() {
     <Section>
       <div className="grid gap-12 lg:grid-cols-2 lg:gap-6">
         <div className="flex flex-col items-center justify-center gap-4 lg:items-start">
-          <h2 className="text-center text-4xl font-bold tracking-tight sm:text-5xl lg:text-start">
+          <h1 className="text-center text-4xl font-bold tracking-tight sm:text-5xl lg:text-start">
             Programa de Tutoria Discente
-          </h2>
+          </h1>
           <p className="max-w-prose text-center text-lg text-muted-foreground lg:text-start">
             Fornecemos suporte personalizado e workshops para auxiliá-lo na
             aprendizagem de conceitos fundamentais para a faculdade.

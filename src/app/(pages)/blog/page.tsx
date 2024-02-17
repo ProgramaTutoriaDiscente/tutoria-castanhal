@@ -1,4 +1,4 @@
-import { PageHeader } from '@/components/page-header/page-header'
+import { PageHeader } from '@/components/shared/page-header'
 import React from 'react'
 
 export default function Blog() {
