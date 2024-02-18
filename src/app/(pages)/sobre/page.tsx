@@ -1,5 +1,5 @@
 import { AreasSection } from '@/components/@pages/sobre/areas-section/areas-section'
-import { PageHeader } from '@/components/page-header/page-header'
+import { PageHeader } from '@/components/shared/page-header'
 import React from 'react'
 
 export default function Sobre() {

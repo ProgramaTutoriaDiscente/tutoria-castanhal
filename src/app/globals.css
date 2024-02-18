@@ -74,9 +74,13 @@
 
 @layer components{
   .two-cols{
-    @apply grid md:grid-cols-2 gap-x-20 ;
+    @apply grid md:grid-cols-2 gap-x-12 ;
   }
   .col-y-center{
     @apply flex flex-col justify-center;
+  }
+
+  .container {
+    @apply mx-auto w-full max-w-screen-xl px-2.5 md:px-20
   }
 }
