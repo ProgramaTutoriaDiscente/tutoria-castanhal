@@ -12,7 +12,7 @@ export function LayoutSection() {
             width={616}
             height={640}
             alt="Imagem ilustrativa"
-            className="h-[640px]"
+            className="h-[640px] rounded-2xl"
           />
         </div>
         <div className="flex flex-col justify-center gap-4">
