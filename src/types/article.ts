@@ -1,3 +1,5 @@
+import type { RichTextContent } from '@graphcms/rich-text-types'
+
 export interface ArticleProps {
   title: string
   slug: string
@@ -7,6 +9,8 @@ export interface ArticleProps {
     url: string
   }
   content: {
-    text: string
+    raw: RichTextContent
   }
+  updatedAt: string
+  createdAt: string
 }

@@ -1,5 +1,6 @@
+import ArticleList from '@/components/article/article-list'
+import { Section } from '@/components/section/section'
 import { PageHeader } from '@/components/shared/page-header'
-import React from 'react'
 
 export default function Blog() {
   return (
@@ -10,6 +11,9 @@ export default function Blog() {
         description="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique. "
       />
       {/* TODO: Articles Section */}
+      <Section background="gray">
+        <ArticleList />
+      </Section>
     </>
   )
 }

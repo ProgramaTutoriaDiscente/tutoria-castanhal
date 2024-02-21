@@ -1,6 +1,6 @@
 import { AreasSection } from '@/components/@pages/sobre/areas-section/areas-section'
+import { TeamSection } from '@/components/@pages/sobre/team-section/team-section'
 import { PageHeader } from '@/components/shared/page-header'
-import React from 'react'
 
 export default function Sobre() {
   return (
@@ -14,7 +14,7 @@ export default function Sobre() {
       {/* TODO: Areas Section */}
       <AreasSection />
       {/* Team Section */}
-
+      <TeamSection />
       {/* FAQ Section */}
     </>
   )

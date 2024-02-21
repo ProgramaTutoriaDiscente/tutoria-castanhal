@@ -6,7 +6,7 @@ interface ArticleListProps {
 }
 
 export default function ArticleList({ maxLenght }: ArticleListProps) {
-  const articlesNumber = maxLenght !== null ? `(first: ${maxLenght})` : ''
+  const articlesNumber = maxLenght !== undefined ? `(first: ${maxLenght})` : ''
 
   const query = `query Articles {
     articles${articlesNumber} {
