@@ -5,13 +5,13 @@ import Link from 'next/link'
 
 export function HeroSection() {
   return (
-    <Section>
-      <div className="grid gap-12 lg:grid-cols-2 lg:gap-6">
-        <div className="flex flex-col items-center justify-center gap-4 lg:items-start">
-          <h1 className="text-center text-4xl font-bold tracking-tight sm:text-5xl lg:text-start">
+    <Section enableBg className="relative">
+      <div className="grid gap-12 lg:gap-6 ">
+        <div className="flex flex-col items-center justify-center gap-4 ">
+          <h1 className="text-center text-4xl font-bold tracking-tight sm:text-5xl">
             Programa de Tutoria Discente
           </h1>
-          <p className="max-w-prose text-center text-lg text-muted-foreground lg:text-start">
+          <p className="max-w-prose text-center text-lg text-muted-foreground ">
             Fornecemos suporte personalizado e workshops para auxiliá-lo na
             aprendizagem de conceitos fundamentais para a faculdade.
           </p>
@@ -29,7 +29,7 @@ export function HeroSection() {
             </Link>
           </div>
         </div>
-        <div className="flex items-center justify-center">
+        <div className="hidden items-center justify-center md:flex">
           <Image
             src={'/images/hero-section-image.jpg'}
             width={616}

@@ -19,12 +19,14 @@ interface SectionProps
     VariantProps<typeof SectionVariants> {
   className?: string
   children: ReactNode
+  enableBg?: boolean
 }
 
 export function Section({
   className,
   children,
   background,
+  enableBg,
   ...props
 }: SectionProps) {
   return (
@@ -32,7 +34,9 @@ export function Section({
       className={cn(SectionVariants({ background }), className)}
       {...props}
     >
+      {enableBg && <div className="dots-bg"></div>}
       <div className="container">{children}</div>
     </section>
   )
 }
+// enableBg && <div className="dots-bg"></div>
