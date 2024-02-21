@@ -1,5 +1,8 @@
 import { AreasCard } from './areas-card'
 import { Section } from '@/components/section/section'
+import CardImageLinguagens from 'public/images/areas-card-image-linguagens.jpg'
+import CardImageMatematica from 'public/images/areas-card-image-matematica.jpg'
+import CardImageInformatica from 'public/images/areas-card-image-informatica.jpg'
 
 export function AreasSection() {
   return (
@@ -17,17 +20,17 @@ export function AreasSection() {
             <AreasCard
               title="Linguagens"
               description="Apoio acadêmico personalizado para ajudar você a ter sucesso."
-              background="bg-[url('/images/areas-card-image-linguagens.jpg')]"
+              background={CardImageLinguagens}
             />
             <AreasCard
               title="Matemática"
               description="Oferecer suporte acadêmico de qualidade para estudantes."
-              background="bg-[url('/images/areas-card-image-matematica.jpg')]"
+              background={CardImageMatematica}
             />
             <AreasCard
               title="Informática"
               description="Contribuir para o sucesso acadêmico de estudantes em todo o país."
-              background="bg-[url('/images/areas-card-image-informatica.jpg')]"
+              background={CardImageInformatica}
             />
           </div>
         </div>
@@ -35,3 +38,4 @@ export function AreasSection() {
     </div>
   )
 }
+// bg-[url('/images/areas-card-image-linguagens.jpg')]
