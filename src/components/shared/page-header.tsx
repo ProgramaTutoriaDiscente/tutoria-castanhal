@@ -10,10 +10,15 @@ interface PageHeaderProps {
 export function PageHeader({ title, description, className }: PageHeaderProps) {
   return (
     <Section className={cn('border-b-2 border-black', className)}>
+      <div className="absolute inset-0 -z-10 h-full w-full bg-white bg-[linear-gradient(to_right,#8080800a_1px,transparent_1px),linear-gradient(to_bottom,#8080800a_1px,transparent_1px)] bg-[size:14px_24px]">
+        <div className="absolute left-0 right-0 top-0 -z-10 m-auto h-[310px] w-[310px] rounded-full bg-primary opacity-20 blur-[100px]"></div>
+      </div>
       <div className="space-y-6 py-20 text-center">
         <h2 className="text-5xl font-bold">{title}</h2>
         <p className="text-lg">{description}</p>
       </div>
     </Section>
   )
+}
+{
 }

@@ -20,17 +20,19 @@ export function AreasSection() {
             <AreasCard
               title="Linguagens"
               description="Apoio acadêmico personalizado para ajudar você a ter sucesso."
-              // background={CardImageLinguagens}
+              background={"bg-[url('/images/areas-card-image-linguagens.jpg')]"}
             />
             <AreasCard
               title="Matemática"
               description="Oferecer suporte acadêmico de qualidade para estudantes."
-              // background={CardImageMatematica}
+              background={"bg-[url('/images/areas-card-image-matematica.jpg')]"}
             />
             <AreasCard
               title="Informática"
               description="Contribuir para o sucesso acadêmico de estudantes em todo o país."
-              // background={CardImageInformatica}
+              background={
+                "bg-[url('/images/areas-card-image-informatica.jpg')]"
+              }
             />
           </div>
         </div>
