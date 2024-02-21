@@ -47,7 +47,12 @@ export default function SectionHeader({
         {title}
       </h2>
       {description && (
-        <p className="max-w-prose text-center text-lg text-muted-foreground lg:text-start">
+        <p
+          className={cn(
+            'max-w-prose text-center text-lg text-muted-foreground lg:text-start',
+            className,
+          )}
+        >
           {description}
         </p>
       )}
