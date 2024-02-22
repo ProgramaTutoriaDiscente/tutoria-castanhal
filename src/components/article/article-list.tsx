@@ -10,7 +10,6 @@ export default function ArticleList({ maxLenght }: ArticleListProps) {
 
   const query = `query Articles {
     articles${articlesNumber} {
-      date
       excerpt
       id
       slug
