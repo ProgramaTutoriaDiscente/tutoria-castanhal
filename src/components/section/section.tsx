@@ -39,4 +39,3 @@ export function Section({
     </section>
   )
 }
-// enableBg && <div className="dots-bg"></div>

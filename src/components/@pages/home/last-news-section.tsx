@@ -7,10 +7,9 @@ export function LastNewsSection() {
     <Section background="gray">
       <SectionHeader
         title="Ultimas Notícias"
-        button="withButton"
+        withButton
         label="Ver notícias"
         href="/blog"
-        className="mb-6"
       />
 
       <ArticleList maxLenght={3} />
