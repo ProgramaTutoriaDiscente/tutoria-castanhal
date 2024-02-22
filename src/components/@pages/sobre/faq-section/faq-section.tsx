@@ -10,7 +10,6 @@ import {
 export function FaqSection() {
   return (
     <Section>
-      <div className="space-y-16">
         <SectionHeader
           title="Perguntas"
           description="Aqui você encontrará respostas para as duvidas mais frequentes sobre o funcionamento do projeto e como ele pode ajudar os alunos"
@@ -67,7 +66,6 @@ export function FaqSection() {
             </AccordionContent>
           </AccordionItem>
         </Accordion>
-      </div>
     </Section>
   )
 }

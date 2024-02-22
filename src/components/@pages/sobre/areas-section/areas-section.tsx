@@ -7,9 +7,7 @@ import { Section } from "@/components/section/section";
 
 export function AreasSection() {
   return (
-    <div>
       <Section>
-        <div className="space-y-20">
           <SectionHeader title="Áreas" subtitle="Apoio Academico" description="Tutoria online para estudantes com dificuldades acadêmicas" className=" items-center" />
           <div className="h-max-[640px] grid h-full gap-6 lg:grid-cols-3">
             <AreasCard
@@ -30,9 +28,7 @@ export function AreasSection() {
               }
             />
           </div>
-        </div>
       </Section>
-    </div>
   );
 }
 // bg-[url('/images/areas-card-image-linguagens.jpg')]

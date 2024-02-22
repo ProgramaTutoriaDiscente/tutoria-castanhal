@@ -41,7 +41,7 @@ export default function SectionHeader({
       <div
         className={
           cn(
-            "min-[448px]:justify-between flex flex-col items-center justify-center w-full  space-y-1 min-[448px]:flex-row mb-6", className
+            "min-[448px]:justify-between flex flex-col items-center justify-center w-full  space-y-1 min-[448px]:flex-row mb-8", className
           )
         }
       >
@@ -57,7 +57,7 @@ export default function SectionHeader({
     );
   }
   return (
-    <div className={cn("flex flex-col gap-4", className)} {...props}>
+    <div className={cn("flex flex-col gap-4 mb-8", className)} {...props}>
       {subtitle && <span className="font-semibold">{subtitle}</span>}
       <h2 className="text-center text-3xl font-bold tracking-tight sm:text-4xl lg:text-start">
         {title}
