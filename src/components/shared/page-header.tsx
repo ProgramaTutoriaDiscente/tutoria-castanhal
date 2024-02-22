@@ -14,7 +14,7 @@ export function PageHeader({ title, description, className }: PageHeaderProps) {
       background={"gray"}
       className={cn("border-b-2 border-secondary", className)}
     >
-      <div className="mx-auto max-w-prose space-y-6 py-20 text-center">
+      <div className="mx-auto max-w-prose space-y-6 text-center">
         <h1 className="text-4xl font-bold tracking-tight sm:text-5xl">{title}</h1>
         <p className="text-lg text-muted-foreground ">{description}</p>
       </div>
