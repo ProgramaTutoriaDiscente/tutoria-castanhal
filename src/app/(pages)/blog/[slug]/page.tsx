@@ -24,11 +24,10 @@ interface BlogArticleProps {
 export default async function BlogArticle({
   params: { slug },
 }: BlogArticleProps) {
-  function getArticle(): Promise<{ article: ArticleProps }> {
-    const query = `query Article {
+  function getArticlePage(): Promise<{ article: ArticleProps }> {
+    const query = `query ArticlePage {
       article(where: {slug: "${slug}"}) {
         title
-        date
         excerpt
         slug
         content {
@@ -45,7 +44,7 @@ export default async function BlogArticle({
     return fetchHygraph(query)
   }
 
-  const { article } = await getArticle()
+  const { article } = await getArticlePage()
 
   if (!article) {
     return notFound()
