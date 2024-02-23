@@ -35,7 +35,7 @@ export function HeroSection() {
             width={616}
             height={640}
             alt="Hero Section Alt"
-            className="rounded-2xl mt-4"
+            className="mt-4 rounded-2xl"
             priority
           />
         </div>
