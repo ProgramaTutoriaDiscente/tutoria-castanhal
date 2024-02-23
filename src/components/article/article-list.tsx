@@ -1,4 +1,5 @@
 import { Suspense } from 'react'
+import { GridWrapper } from '../shared/grid-wrapper'
 import { ArticleFetch } from './article-fetch'
 
 interface ArticleListProps {
@@ -21,10 +22,10 @@ export default function ArticleList({ maxLenght }: ArticleListProps) {
   }`
 
   return (
-    <div className="grid grid-cols-1 gap-12 sm:grid-cols-2 sm:gap-6 lg:grid-cols-3 lg:gap-8">
+    <GridWrapper>
       <Suspense fallback={<p>Carregando...</p>}>
         <ArticleFetch query={query} />
       </Suspense>
-    </div>
+    </GridWrapper>
   )
 }
