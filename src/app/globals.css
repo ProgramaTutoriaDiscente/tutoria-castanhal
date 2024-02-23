@@ -88,6 +88,6 @@
     @apply mx-auto w-full max-w-screen-xl px-2.5 md:px-20
   }
   .dots-bg{
-    @apply absolute inset-0 -z-10 h-full w-full bg-white bg-[radial-gradient(#e5e7eb_1px,transparent_1px)] [background-size:16px_16px]
+    @apply absolute inset-0 -z-10 h-full w-full bg-[radial-gradient(#e5e7eb_1px,transparent_1px)] [background-size:16px_16px] dark:bg-[radial-gradient(#171717_1px,transparent_1px)]
   }
 }
