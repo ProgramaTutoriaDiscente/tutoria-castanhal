@@ -1,20 +1,20 @@
-import Link from 'next/link'
-import { buttonVariants } from '../shadcn-ui/button'
 import {
   InstagramLogoIcon,
   LinkedInLogoIcon,
   TwitterLogoIcon,
 } from '@radix-ui/react-icons'
+import Link from 'next/link'
 import { BsYoutube } from 'react-icons/bs'
 import { FaFacebook } from 'react-icons/fa'
 import { Section } from '../section/section'
+import { buttonVariants } from '../shadcn-ui/button'
 
 export function Footer() {
   return (
     <footer>
       <div className="bg-secondary-foreground">
-        <Section className=''>
-          <div className="grid grid-cols-1 text-center sm:text-start sm:grid-cols-2 sm:items-center ">
+        <Section className="">
+          <div className="grid grid-cols-1 text-center sm:grid-cols-2 sm:items-center sm:text-start ">
             <div className="text-background">
               <h3 className="text-4xl font-bold">
                 Aprenda e se destaque acadêmico
@@ -24,7 +24,7 @@ export function Footer() {
                 sucesso acadêmico.
               </p>
             </div>
-            <div className="flex pt-4 sm:pt-0 gap-4 justify-center sm:justify-end">
+            <div className="flex justify-center gap-4 pt-4 sm:justify-end sm:pt-0">
               <Link href={'/sobre'} className={buttonVariants()}>
                 Saiba mais
               </Link>
@@ -41,7 +41,7 @@ export function Footer() {
       <div>
         <Section>
           <div>
-            <div className="two-cols justify-center text-center md:text-start md:justify-between">
+            <div className="two-cols justify-center text-center md:justify-between md:text-start">
               <div className="space-y-8 text-sm">
                 <Link href="/">
                   <span className="text-2xl font-bold">Logo</span>
@@ -57,7 +57,7 @@ export function Footer() {
                     <p className="underline">info@relume.io</p>
                   </div>
 
-                  <div className="flex justify-center md:justify-start gap-3">
+                  <div className="flex justify-center gap-3 md:justify-start">
                     <Link href="#">
                       <FaFacebook />
                     </Link>
@@ -76,7 +76,7 @@ export function Footer() {
                   </div>
                 </div>
               </div>
-              <div className="flex pt-6 justify-center md:pt-0 md:justify-end gap-20 md:pr-20">
+              <div className="flex justify-center gap-20 pt-6 md:justify-end md:pr-20 md:pt-0">
                 <div className="space-y-3">
                   <div className="inline-block">
                     <Link href="#">Link</Link>

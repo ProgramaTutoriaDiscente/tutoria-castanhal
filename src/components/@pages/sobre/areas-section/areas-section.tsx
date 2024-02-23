@@ -1,7 +1,7 @@
 import { Section } from '@/components/section/section'
-import SectionHeader from '@/components/section/section-header'
-import { AreasCard } from './areas-card'
+import { SectionHeader } from '@/components/section/section-header'
 import { GridWrapper } from '@/components/shared/grid-wrapper'
+import { AreasCard } from './areas-card'
 
 export function AreasSection() {
   return (

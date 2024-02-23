@@ -1,5 +1,5 @@
 import { Section } from '@/components/section/section'
-import SectionHeader from '@/components/section/section-header'
+import { SectionHeader } from '@/components/section/section-header'
 import Image from 'next/image'
 
 export function LayoutSection() {

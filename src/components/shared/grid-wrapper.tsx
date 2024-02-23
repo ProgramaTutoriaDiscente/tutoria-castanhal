@@ -29,7 +29,7 @@ export function GridWrapper({
 }: GridWrapperProps) {
   return (
     <div className={cn(GridWrapperVariants({ columns }), className)} {...props}>
-        {children}
+      {children}
     </div>
   )
 }
