@@ -13,9 +13,9 @@ export function Footer() {
   return (
     <footer>
       <div className="bg-secondary-foreground">
-        <Section>
-          <div className="flex justify-between">
-            <div className="text-white">
+        <Section className=''>
+          <div className="grid grid-cols-1 text-center sm:text-start sm:grid-cols-2 sm:items-center ">
+            <div className="text-background">
               <h3 className="text-4xl font-bold">
                 Aprenda e se destaque acadêmico
               </h3>
@@ -24,7 +24,7 @@ export function Footer() {
                 sucesso acadêmico.
               </p>
             </div>
-            <div className="mt-4 flex gap-4">
+            <div className="flex pt-4 sm:pt-0 gap-4 justify-center sm:justify-end">
               <Link href={'/sobre'} className={buttonVariants()}>
                 Saiba mais
               </Link>
@@ -41,7 +41,7 @@ export function Footer() {
       <div>
         <Section>
           <div>
-            <div className="two-cols justify-between">
+            <div className="two-cols justify-center text-center md:text-start md:justify-between">
               <div className="space-y-8 text-sm">
                 <Link href="/">
                   <span className="text-2xl font-bold">Logo</span>
@@ -57,7 +57,7 @@ export function Footer() {
                     <p className="underline">info@relume.io</p>
                   </div>
 
-                  <div className="flex gap-3">
+                  <div className="flex justify-center md:justify-start gap-3">
                     <Link href="#">
                       <FaFacebook />
                     </Link>
@@ -76,7 +76,7 @@ export function Footer() {
                   </div>
                 </div>
               </div>
-              <div className="flex justify-end gap-20 pr-20">
+              <div className="flex pt-6 justify-center md:pt-0 md:justify-end gap-20 md:pr-20">
                 <div className="space-y-3">
                   <div className="inline-block">
                     <Link href="#">Link</Link>
@@ -101,7 +101,7 @@ export function Footer() {
                 </div>
               </div>
             </div>
-            <div className="mt-10 border-t-2 pb-10 pt-8 md:flex md:items-center md:justify-between">
+            <div className="mt-10 border-t-2 pt-8 md:flex md:items-center md:justify-between">
               <div className="text-center md:text-left">
                 <p className="text-sm text-muted-foreground">
                   &copy; {new Date().getFullYear()} All Rights Reserved
