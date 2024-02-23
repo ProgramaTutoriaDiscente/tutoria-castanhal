@@ -5,6 +5,7 @@ import { NavItem } from '@/components/nav-bar/nav-item'
 import { Button } from '@/components/shadcn-ui/button'
 import { siteConfig } from '@/config/site'
 import Link from 'next/link'
+import { ThemeToggle } from '@/components/theme/theme-toggle'
 
 export function Navbar() {
   return (
@@ -25,6 +26,7 @@ export function Navbar() {
           <div className="flex items-center gap-4">
             <Button className="hidden md:block">Inscreva-se</Button>
             <MobileNav />
+            <ThemeToggle />
           </div>
         </div>
       </div>

@@ -4,6 +4,7 @@ import { cn } from '@/lib/utils'
 import type { Metadata } from 'next'
 import { Inter } from 'next/font/google'
 import './globals.css'
+import { ThemeProvider } from '@/components/theme/theme-provider'
 
 const inter = Inter({ subsets: ['latin'] })
 
@@ -20,12 +21,18 @@ export default function RootLayout({
   return (
     <html lang="pt-BR" className="h-full">
       <body className={cn('relative h-full antialiased', inter.className)}>
+        <ThemeProvider
+            attribute="class"
+            defaultTheme="system"
+            enableSystem
+            disableTransitionOnChange
+          >
         <main className="relative flex min-h-screen flex-col">
           <Navbar />
           <div className="flex-1 flex-grow">{children}</div>
-          {/* TODO: Footer */}
           <Footer />
         </main>
+        </ThemeProvider>
       </body>
     </html>
   )
