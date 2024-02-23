@@ -1,6 +1,7 @@
 import { Section } from "@/components/section/section";
 import SectionHeader from "@/components/section/section-header";
 import { AreasCard } from "./areas-card";
+import { GridWrapper } from "@/components/shared/grid-wrapper";
 
 export function AreasSection() {
   return (
@@ -9,7 +10,7 @@ export function AreasSection() {
               title="Áreas"
               description="Tutoria online para estudantes com dificuldades acadêmicas"
           />
-          <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3 lg:gap-8">
+          <GridWrapper>
             <AreasCard
               title="Linguagens"
               description="Apoio acadêmico personalizado para ajudar você a ter sucesso"
@@ -25,7 +26,7 @@ export function AreasSection() {
               description="Contribuir com o sucesso acadêmico de estudantes do país"
               background="/images/areas-card-image-informatica.jpg"
             />
-          </div>
+          </GridWrapper>
       </Section>
   )
 }
