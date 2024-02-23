@@ -5,7 +5,7 @@ import Link from 'next/link'
 
 export function HeroSection() {
   return (
-    <Section enableBg className="relative">
+    <Section enableBg>
       <div className="grid gap-8 lg:gap-6 ">
         <div className="flex flex-col items-center justify-center gap-4 ">
           <h1 className="text-center text-4xl font-bold tracking-tight sm:text-5xl">
