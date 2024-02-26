@@ -30,12 +30,12 @@ export function HeroSection() {
             </Link>
           </div>
         </div>
-        <div className="hidden items-center justify-center md:flex">
+        <div className="hidden w-full items-center justify-center md:flex">
           <Image
             src={HeroSectionImage}
             placeholder="blur"
             alt="Placa em formato de lápis escrito Love To Learn"
-            className="mt-4 max-w-3xl rounded-2xl"
+            className="mt-4 w-full max-w-3xl rounded-2xl"
             priority
           />
         </div>
