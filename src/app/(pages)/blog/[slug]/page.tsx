@@ -92,15 +92,15 @@ export default async function BlogArticle({
           <div className="mt-6 w-full">
             <SocialShare title={article.title} slug={article.slug} />
           </div>
-          <div className="mt-8 w-full">
-            <Image
-              src={article.thumbnail.url}
-              alt={title}
-              width={640}
-              height={360}
-              className="w-full"
-            />
-          </div>
+
+          <Image
+            src={article.thumbnail.url}
+            alt={title}
+            width={640}
+            height={360}
+            loading="lazy"
+            className="w-full mt-8 rounded-xl"
+          />
 
           <div className="mt-8 w-full space-y-6 text-lg">
             <RichText content={article.content.raw} />

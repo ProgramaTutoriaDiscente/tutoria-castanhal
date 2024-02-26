@@ -2,9 +2,13 @@ import ArticleList from '@/components/article/article-list'
 import { Section } from '@/components/section/section'
 import { SectionHeader } from '@/components/section/section-header'
 
-export function LastNewsSection() {
+export function LastNewsSection({
+  background,
+}: {
+  background?: 'default' | 'gray' | null | undefined
+}) {
   return (
-    <Section>
+    <Section background={background}>
       <SectionHeader
         title="Ultimas Notícias"
         withButton
