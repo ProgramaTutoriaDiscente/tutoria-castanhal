@@ -3,9 +3,9 @@
 import { MobileNav } from '@/components/nav-bar/mobile-nav'
 import { NavItem } from '@/components/nav-bar/nav-item'
 import { Button } from '@/components/shadcn-ui/button'
+import { ThemeToggle } from '@/components/theme/theme-toggle'
 import { siteConfig } from '@/config/site'
 import Link from 'next/link'
-import { ThemeToggle } from '@/components/theme/theme-toggle'
 
 export function Navbar() {
   return (
@@ -23,7 +23,7 @@ export function Navbar() {
               ))}
             </nav>
           </div>
-          <div className="flex items-center gap-4">
+          <div className="flex flex-row-reverse items-center gap-2 md:flex-row md:gap-4">
             <Button className="hidden md:block">Inscreva-se</Button>
             <MobileNav />
             <ThemeToggle />
