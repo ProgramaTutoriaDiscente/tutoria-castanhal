@@ -1,11 +1,11 @@
 import { ChevronRight } from 'lucide-react'
-import Image from 'next/image'
+import Image, { StaticImageData } from 'next/image'
 import Link from 'next/link'
 
 interface AreasCardProps {
   title: string
   description: string
-  background: string
+  background: StaticImageData
 }
 export function AreasCard({ title, description, background }: AreasCardProps) {
   return (
@@ -14,10 +14,11 @@ export function AreasCard({ title, description, background }: AreasCardProps) {
         <div className="absolute bottom-0 left-0 right-0 top-0 bg-gradient-to-t from-foreground to-transparent" />
         <Image
           src={background}
-          width={800}
-          height={800}
           alt="imagem ilustrativa"
-          className="h-contain absolute bottom-0 left-0 right-0 top-0 -z-10"
+          loading="lazy"
+          placeholder="blur"
+          className="absolute -z-10"
+          fill={true}
         />
         <div className="absolute bottom-0 space-y-2 p-6 text-background">
           <h3 className="text-2xl font-bold sm:text-3xl">{title}</h3>
