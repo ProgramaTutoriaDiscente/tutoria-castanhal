@@ -2,6 +2,7 @@ import { Section } from '@/components/section/section'
 import { buttonVariants } from '@/components/shadcn-ui/button'
 import Image from 'next/image'
 import Link from 'next/link'
+import HeroSectionImage from '../../../../public/images/hero-section-image.jpg'
 
 export function HeroSection() {
   return (
@@ -31,11 +32,10 @@ export function HeroSection() {
         </div>
         <div className="hidden items-center justify-center md:flex">
           <Image
-            src={'/images/hero-section-image.jpg'}
-            width={616}
-            height={640}
-            alt="Hero Section Alt"
-            className="mt-4 rounded-2xl"
+            src={HeroSectionImage}
+            placeholder="blur"
+            alt="Placa em formato de lápis escrito Love To Learn"
+            className="mt-4 max-w-3xl rounded-2xl"
             priority
           />
         </div>
