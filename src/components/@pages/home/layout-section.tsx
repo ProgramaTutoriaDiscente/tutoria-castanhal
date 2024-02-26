@@ -1,6 +1,7 @@
 import { Section } from '@/components/section/section'
 import { SectionHeader } from '@/components/section/section-header'
 import Image from 'next/image'
+import LayoutSectionImage from '../../../../public/images/layout-section-image.jpg'
 
 export function LayoutSection() {
   return (
@@ -8,10 +9,10 @@ export function LayoutSection() {
       <div className="grid gap-12 lg:grid-cols-2 ">
         <div className="hidden items-center justify-center lg:flex">
           <Image
-            src={'/images/layout-section-image.jpg'}
-            width={616}
-            height={640}
-            alt="Imagem ilustrativa"
+            src={LayoutSectionImage}
+            placeholder="blur"
+            loading="lazy"
+            alt="Pessoa estudando com livro na mão e notebook na frente"
             className="h-[640px] rounded-2xl"
           />
         </div>
