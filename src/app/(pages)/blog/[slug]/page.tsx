@@ -52,9 +52,8 @@ export default async function BlogArticle({
 
   function formatCreatedAt(createdAt: string) {
     const formattedCreatedDate = format(createdAt, 'dd/MM/yyyy')
-    const formattedCreatedTime = format(createdAt, 'HH:mm')
 
-    return `${formattedCreatedDate} às ${formattedCreatedTime}`
+    return `${formattedCreatedDate}`
   }
 
   function formatUpdatedAt(updatedAt: string) {
@@ -76,13 +75,15 @@ export default async function BlogArticle({
 
   return (
     <>
-      <Section>
+      <Section className="py-10 md:py-20">
         <div className="mx-auto flex max-w-prose flex-col items-center">
           <h1 className="text-3xl font-extrabold tracking-tight text-accent-foreground sm:text-4xl">
             {article.title}
           </h1>
-          <p className="mt-3 text-muted-foreground">{article.excerpt}</p>
-          <div className="mt-3 w-full font-medium text-muted-foreground">
+          <p className="mt-3 text-sm text-muted-foreground sm:text-base">
+            {article.excerpt}
+          </p>
+          <div className="mt-3 flex w-full gap-1 text-sm font-medium text-muted-foreground sm:text-base">
             <span className="flex items-center">
               <Calendar className="mr-1.5 inline h-5  w-5" />
               {formatCreatedAt(article.createdAt)} &bull;{' '}
@@ -99,7 +100,7 @@ export default async function BlogArticle({
             width={640}
             height={360}
             loading="lazy"
-            className="w-full mt-8 rounded-xl"
+            className="mt-8 w-full rounded-xl"
           />
 
           <div className="mt-8 w-full space-y-6 text-lg">
@@ -107,7 +108,7 @@ export default async function BlogArticle({
           </div>
         </div>
       </Section>
-      <LastNewsSection />
+      <LastNewsSection background="gray" />
     </>
   )
 }

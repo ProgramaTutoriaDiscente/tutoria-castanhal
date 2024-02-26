@@ -5,13 +5,12 @@ import { PageHeader } from '@/components/shared/page-header'
 export default function Blog() {
   return (
     <>
-      {/* TODO: Page Header */}
       <PageHeader
         title="Blog"
-        description="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique. "
+        description="Explore nosso blog e descubra sobre dicas de estudos e oficinas ofertadas pelo PTD."
       />
-      {/* TODO: Articles Section */}
-      <Section background="gray">
+
+      <Section>
         <ArticleList />
       </Section>
     </>
