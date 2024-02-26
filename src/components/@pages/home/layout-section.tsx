@@ -5,7 +5,7 @@ import LayoutSectionImage from '../../../../public/images/layout-section-image.j
 
 export function LayoutSection() {
   return (
-    <Section>
+    <Section background="gray">
       <div className="grid gap-12 lg:grid-cols-2 ">
         <div className="hidden items-center justify-center lg:flex">
           <Image

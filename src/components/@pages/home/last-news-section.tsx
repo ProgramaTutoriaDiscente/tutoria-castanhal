@@ -4,7 +4,7 @@ import { SectionHeader } from '@/components/section/section-header'
 
 export function LastNewsSection() {
   return (
-    <Section background="gray">
+    <Section>
       <SectionHeader
         title="Ultimas Notícias"
         withButton
