@@ -19,15 +19,14 @@ export function ArticleCard({
   return (
     <Link href={`/blog/${slug}`}>
       <div className="w-full overflow-hidden rounded-xl border bg-card text-card-foreground shadow transition-colors hover:bg-secondary/40">
-        <div className="w-full">
-          <Image
-            src={thumbnail.url}
-            alt={title}
-            width={640}
-            height={360}
-            className="w-auto"
-          />
-        </div>
+        <Image
+          src={thumbnail.url}
+          alt={title}
+          width={640}
+          height={360}
+          loading="lazy"
+          className="w-auto"
+        />
         <div className="p-6">
           <h3 className="text-xl font-bold">{title}</h3>
           <p className="mt-3 font-normal text-muted-foreground">{excerpt}</p>
