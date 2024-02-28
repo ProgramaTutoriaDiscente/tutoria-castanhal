@@ -77,18 +77,18 @@ export default async function BlogArticle({
     <>
       <Section className="py-10 md:py-20">
         <div className="mx-auto flex max-w-prose flex-col items-center">
-          <h1 className="text-3xl font-extrabold tracking-tight text-accent-foreground sm:text-4xl">
+          <h1 className="text-2xl font-extrabold tracking-tight text-accent-foreground sm:text-3xl">
             {article.title}
           </h1>
           <p className="mt-3 text-sm text-muted-foreground sm:text-base">
             {article.excerpt}
           </p>
-          <div className="mt-3 flex w-full gap-1 text-sm font-medium text-muted-foreground sm:text-base">
-            <span className="flex items-center">
-              <Calendar className="mr-1.5 inline h-5  w-5" />
+          <div className="mt-3 flex w-full items-center gap-1 text-xs font-medium text-muted-foreground sm:text-sm">
+            <Calendar className="h-4 w-4 sm:h-5 sm:w-5" />
+            <p>
               {formatCreatedAt(article.createdAt)} &bull;{' '}
               {formatUpdatedAt(article.updatedAt)}
-            </span>
+            </p>
           </div>
           <div className="mt-6 w-full">
             <SocialShare title={article.title} slug={article.slug} />
