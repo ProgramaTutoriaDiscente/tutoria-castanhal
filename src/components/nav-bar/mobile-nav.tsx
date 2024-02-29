@@ -4,6 +4,7 @@ import { NavItem } from '@/components/nav-bar/nav-item'
 import { Button } from '@/components/shadcn-ui/button'
 import { Sheet, SheetContent, SheetTrigger } from '@/components/shadcn-ui/sheet'
 import { siteConfig } from '@/config/site'
+import Link from 'next/link'
 import { useState } from 'react'
 import { RiMenu4Fill } from 'react-icons/ri'
 
@@ -25,10 +26,14 @@ export function MobileNav() {
 
       <SheetContent side="right">
         <nav className="flex flex-col items-start gap-2">
+          <Link href="/" className="my-6">
+            <span className="text-2xl font-bold">Logo</span>
+          </Link>
+
           {siteConfig.links.map((item, i) => (
             <NavItem name={item.name} href={item.href} key={i} />
           ))}
-          <Button>Inscreva-se</Button>
+          <NavItem name="Inscreva-se" href="#" />
         </nav>
       </SheetContent>
     </Sheet>

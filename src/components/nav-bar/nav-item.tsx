@@ -1,8 +1,8 @@
 'use client'
 
+import { Button } from '@/components/shadcn-ui/button'
 import { cn } from '@/lib/utils'
 import Link from 'next/link'
-import { Button } from '@/components/shadcn-ui/button'
 import { usePathname } from 'next/navigation'
 
 interface NavItemProps {
@@ -19,7 +19,7 @@ export function NavItem({ name, href }: NavItemProps) {
     <Button
       asChild
       variant="link"
-      className={cn('text-base transition-colors', isActive(href))}
+      className={cn('text-lg transition-colors', isActive(href))}
     >
       <Link href={href}>{name}</Link>
     </Button>
