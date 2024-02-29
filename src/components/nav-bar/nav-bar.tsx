@@ -23,10 +23,12 @@ export function Navbar() {
               ))}
             </nav>
           </div>
-          <div className="flex flex-row-reverse items-center gap-2 md:flex-row md:gap-4">
+          <div className="flex flex-row-reverse items-center md:flex-row">
             <Button className="hidden md:block">Inscreva-se</Button>
             <MobileNav />
-            <ThemeToggle />
+            <div className="ml-2 hidden md:flex">
+              <ThemeToggle />
+            </div>
           </div>
         </div>
       </div>
