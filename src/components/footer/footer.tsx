@@ -14,7 +14,7 @@ export function Footer() {
     <footer>
       <div className="bg-secondary-foreground">
         <Section className="">
-          <div className="grid grid-cols-1 text-center sm:grid-cols-2 sm:items-center sm:text-start ">
+          <div className="flex justify-between items-start gap-4 sm:items-center flex-col sm:flex-row sm:text-start ">
             <div className="text-background">
               <h3 className="text-4xl font-bold">
                 Aprenda e se destaque acadêmico
@@ -24,7 +24,7 @@ export function Footer() {
                 sucesso acadêmico.
               </p>
             </div>
-            <div className="flex justify-center gap-4 pt-4 sm:justify-end sm:pt-0">
+            <div className="flex justify-start gap-4 pt-4 sm:justify-end sm:pt-0">
               <Link href={'/sobre'} className={buttonVariants()}>
                 Saiba mais
               </Link>
