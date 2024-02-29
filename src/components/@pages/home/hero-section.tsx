@@ -17,16 +17,19 @@ export function HeroSection() {
             aprendizagem de conceitos fundamentais para a faculdade.
           </p>
           <div className="space-x-4">
-            <Link href={'/sobre'} className={buttonVariants()}>
-              Saiba mais
-            </Link>
             <Link
               href={
                 'https://docs.google.com/forms/d/e/1FAIpQLSdle9P_0kVByW5itjUESMdsMecKLXeBQb_aEoMextOO52lj2A/viewform?pli=1'
               }
-              className={buttonVariants({ variant: 'outline' })}
+              className={buttonVariants()}
             >
               Inscreva-se
+            </Link>
+            <Link
+              href={'/sobre'}
+              className={buttonVariants({ variant: 'outline' })}
+            >
+              Saiba mais
             </Link>
           </div>
         </div>
