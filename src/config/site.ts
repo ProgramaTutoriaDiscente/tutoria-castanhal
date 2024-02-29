@@ -11,5 +11,7 @@ export const siteConfig = {
   ],
   social: {
     instagram: 'https://isntagram.com/link',
+    linkedin:
+      'https://www.linkedin.com/company/tutoria-discente-castanhal/mycompany/',
   },
 }
