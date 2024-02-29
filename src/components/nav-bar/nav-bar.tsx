@@ -3,7 +3,6 @@
 import { MobileNav } from '@/components/nav-bar/mobile-nav'
 import { NavItem } from '@/components/nav-bar/nav-item'
 import { Button } from '@/components/shadcn-ui/button'
-import { Separator } from '@/components/shadcn-ui/separator'
 import { ThemeToggle } from '@/components/theme/theme-toggle'
 import { siteConfig } from '@/config/site'
 import Link from 'next/link'
@@ -27,8 +26,7 @@ export function Navbar() {
           <div className="flex flex-row-reverse items-center md:flex-row">
             <Button className="hidden md:block">Inscreva-se</Button>
             <MobileNav />
-            <div className="hidden md:flex">
-              <Separator orientation="vertical" className="ml-4 mr-2 h-10" />
+            <div className="ml-2 hidden md:flex">
               <ThemeToggle />
             </div>
           </div>
