@@ -10,7 +10,7 @@ export const siteConfig = {
     { name: 'Contato', href: '/contato' },
   ],
   social: {
-    instagram: 'https://isntagram.com/link',
+    instagram: 'https://www.instagram.com/tutoria_ufpa_cast/',
     linkedin:
       'https://www.linkedin.com/company/tutoria-discente-castanhal/mycompany/',
   },
