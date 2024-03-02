@@ -19,7 +19,7 @@ export function NavItem({ name, href }: NavItemProps) {
     <Button
       asChild
       variant="link"
-      className={cn('text-lg transition-colors', isActive(href))}
+      className={cn('text-lg transition-colors md:text-base', isActive(href))}
     >
       <Link href={href}>{name}</Link>
     </Button>

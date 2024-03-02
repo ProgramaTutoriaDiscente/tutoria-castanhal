@@ -1,8 +1,5 @@
 'use client'
 
-import { MoonIcon, SunIcon } from '@radix-ui/react-icons'
-import { useTheme } from 'next-themes'
-
 import { Button } from '@/components/shadcn-ui/button'
 import {
   DropdownMenu,
@@ -10,6 +7,9 @@ import {
   DropdownMenuItem,
   DropdownMenuTrigger,
 } from '@/components/shadcn-ui/dropdown-menu'
+import { MoonIcon } from '@radix-ui/react-icons'
+import { Sun } from 'lucide-react'
+import { useTheme } from 'next-themes'
 
 export function ThemeToggle() {
   const { setTheme } = useTheme()
@@ -17,9 +17,9 @@ export function ThemeToggle() {
   return (
     <DropdownMenu>
       <DropdownMenuTrigger asChild>
-        <Button variant="ghost" size="icon">
-          <SunIcon className="h-[1.2rem] w-[1.2rem] rotate-0 scale-100 transition-all dark:-rotate-90 dark:scale-0" />
-          <MoonIcon className="absolute h-[1.2rem] w-[1.2rem] rotate-90 scale-0 transition-all dark:rotate-0 dark:scale-100" />
+        <Button variant="ghost" className="text-muted-foreground" size="icon">
+          <Sun className="h-6 w-6 scale-100 transition-all dark:scale-0 md:h-5 md:w-5" />
+          <MoonIcon className="absolute h-6 w-6 scale-0 transition-all dark:scale-100 md:h-5 md:w-5" />
           <span className="sr-only">Trocar tema</span>
         </Button>
       </DropdownMenuTrigger>
