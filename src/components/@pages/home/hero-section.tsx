@@ -13,7 +13,7 @@ export function HeroSection() {
             Programa de Tutoria Discente
           </h1>
           <p className="max-w-prose text-center text-lg text-muted-foreground ">
-            Fornecemos suporte personalizado e workshops para auxiliá-lo na
+            Fornecemos suporte personalizado e oficinas para auxiliá-lo na
             aprendizagem de conceitos fundamentais para a faculdade.
           </p>
           <div className="space-x-4">

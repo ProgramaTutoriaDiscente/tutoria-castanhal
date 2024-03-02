@@ -19,7 +19,7 @@ export function LayoutSection() {
         <div className="flex flex-col justify-center gap-4">
           <SectionHeader
             title="Alcance o sucesso acadêmico com nossas tutorias"
-            description="Participe de nossas tutorias e workshops e obtenha os benefícios de
+            description="Participe de nossas tutorias e oficinas e obtenha os benefícios de
             um ensino personalizado e de qualidade. Nossos tutores experientes
             ajudarão você a superar seus desafios acadêmicos."
           />
@@ -27,7 +27,7 @@ export function LayoutSection() {
             <div className="flex flex-col items-center gap-2 lg:items-start">
               <span className="text-4xl font-bold">50%</span>
               <p className="text-center lg:text-start">
-                Aulas personalizadas e workshops interativos
+                Aulas personalizadas e oficinas interativas
               </p>
             </div>
             <div className="flex flex-col items-center gap-2 lg:items-start">
