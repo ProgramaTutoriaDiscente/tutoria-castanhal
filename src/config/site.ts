@@ -3,7 +3,7 @@ export const siteConfig = {
   url: 'https://tutoriacastanhal.com.br',
   ogImage: 'https://tutoriacastanhal.com.br/og.jpg',
   description:
-    'Orientando alunos para desenvolvimento pessoal, acadêmico e profissional.',
+    'Orientando alunos para o desenvolvimento pessoal, acadêmico e profissional.',
   links: [
     { name: 'Sobre Nós', href: '/sobre' },
     { name: 'Blog', href: '/blog' },
