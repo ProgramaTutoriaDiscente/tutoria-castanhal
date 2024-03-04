@@ -7,7 +7,6 @@ export const siteConfig = {
   links: [
     { name: 'Sobre Nós', href: '/sobre' },
     { name: 'Blog', href: '/blog' },
-    { name: 'Contato', href: '/contato' },
   ],
   social: {
     instagram: 'https://www.instagram.com/tutoria_ufpa_cast/',
