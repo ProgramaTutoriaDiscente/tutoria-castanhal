@@ -1,15 +1,15 @@
 'use client'
 
-import { NavItem } from '@/components/nav-bar/nav-item'
 import { Button } from '@/components/shadcn-ui/button'
-import { Separator } from '@/components/shadcn-ui/separator'
 import { Sheet, SheetContent, SheetTrigger } from '@/components/shadcn-ui/sheet'
-import { ThemeToggle } from '@/components/theme/theme-toggle'
 import { siteConfig } from '@/config/site'
+import Image from 'next/image'
 import Link from 'next/link'
 import { useState } from 'react'
 import { FaInstagram, FaLinkedin } from 'react-icons/fa'
 import { RiMenu4Fill } from 'react-icons/ri'
+import { Separator } from '../shadcn-ui/separator'
+import { ThemeToggle } from '../theme/theme-toggle'
 
 export function MobileNav() {
   const [open, setOpen] = useState(false)
@@ -20,7 +20,7 @@ export function MobileNav() {
         <Button
           variant="ghost"
           size="icon"
-          className="mr-2 px-0 text-base hover:bg-transparent md:hidden"
+          className="px-0 text-muted-foreground hover:bg-transparent  md:hidden"
         >
           <RiMenu4Fill className="h-5 w-5" />
           <span className="sr-only">Abrir menu</span>
@@ -28,29 +28,55 @@ export function MobileNav() {
       </SheetTrigger>
 
       <SheetContent side="right">
-        <nav className="mt-6 flex flex-col items-start gap-2">
-          <Link href="/" className="mb-4">
-            <span className="text-2xl font-bold">Logo</span>
+        <div className="mt-6 flex flex-col">
+          <Link href="/" className="max-w-48">
+            <Image
+              src="/logo.svg"
+              alt="Logo da Tutoria Castanhal"
+              width={192}
+              height={70}
+              className="w-full"
+            />
           </Link>
+          <p className="mt-6 text-sm text-muted-foreground">
+            Programa de Tutoria Discente - UFPA Campus Castanhal
+          </p>
 
-          {siteConfig.links.map((item, i) => (
-            <NavItem name={item.name} href={item.href} key={i} />
-          ))}
-          <NavItem name="Inscreva-se" href="#" />
-        </nav>
-        <Separator className="my-4" />
-        <div className="flex w-full items-center justify-start gap-1">
-          <ThemeToggle />
-          <Link href={siteConfig.social.instagram}>
-            <Button variant="ghost" size="icon">
-              <FaInstagram className="h-5 w-5" />
-            </Button>
-          </Link>
-          <Link href={siteConfig.social.linkedin}>
-            <Button variant="ghost" size="icon">
-              <FaLinkedin className="h-5 w-5" />
-            </Button>
-          </Link>
+          <nav className="my-8 flex flex-col gap-6">
+            {siteConfig.links.map((item, i) => (
+              <Link
+                href={item.href}
+                key={i}
+                className="text-xl text-muted-foreground hover:underline"
+              >
+                {item.name}
+              </Link>
+            ))}
+          </nav>
+
+          <Separator />
+
+          <div className="mt-4 flex gap-4">
+            <Link href={siteConfig.social.instagram}>
+              <Button
+                size="icon"
+                variant="ghost"
+                className="text-muted-foreground"
+              >
+                <FaInstagram className="h-6 w-6" />
+              </Button>
+            </Link>
+            <Link href={siteConfig.social.linkedin}>
+              <Button
+                size="icon"
+                variant="ghost"
+                className="text-muted-foreground"
+              >
+                <FaLinkedin className="h-6 w-6" />
+              </Button>
+            </Link>
+            <ThemeToggle />
+          </div>
         </div>
       </SheetContent>
     </Sheet>

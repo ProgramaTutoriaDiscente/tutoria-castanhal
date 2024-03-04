@@ -45,7 +45,10 @@ export function SectionHeader({
     )
   }
   return (
-    <div className={cn('mb-8 flex flex-col gap-4', className)} {...props}>
+    <div
+      className={cn('mb-8 flex flex-col items-center gap-4', className)}
+      {...props}
+    >
       {subtitle && <span className="font-semibold">{subtitle}</span>}
       <h2 className="text-center text-3xl font-bold tracking-tight sm:text-4xl lg:text-start">
         {title}

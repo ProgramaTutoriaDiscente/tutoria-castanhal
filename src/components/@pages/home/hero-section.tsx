@@ -13,20 +13,23 @@ export function HeroSection() {
             Programa de Tutoria Discente
           </h1>
           <p className="max-w-prose text-center text-lg text-muted-foreground ">
-            Fornecemos suporte personalizado e workshops para auxiliá-lo na
+            Fornecemos suporte personalizado e oficinas para auxiliá-lo na
             aprendizagem de conceitos fundamentais para a faculdade.
           </p>
           <div className="space-x-4">
-            <Link href={'/sobre'} className={buttonVariants()}>
-              Saiba mais
-            </Link>
             <Link
               href={
                 'https://docs.google.com/forms/d/e/1FAIpQLSdle9P_0kVByW5itjUESMdsMecKLXeBQb_aEoMextOO52lj2A/viewform?pli=1'
               }
-              className={buttonVariants({ variant: 'outline' })}
+              className={buttonVariants()}
             >
               Inscreva-se
+            </Link>
+            <Link
+              href={'/sobre'}
+              className={buttonVariants({ variant: 'outline' })}
+            >
+              Saiba mais
             </Link>
           </div>
         </div>
