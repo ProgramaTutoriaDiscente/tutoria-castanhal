@@ -10,7 +10,6 @@ export const siteConfig = {
   ],
   social: {
     instagram: 'https://www.instagram.com/tutoria_ufpa_cast/',
-    linkedin:
-      'https://www.linkedin.com/company/tutoria-discente-castanhal/',
+    linkedin: 'https://www.linkedin.com/company/tutoria-discente-castanhal/',
   },
 }
