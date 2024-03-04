@@ -13,7 +13,7 @@ export function Footer() {
       <Section className="py-20">
         <div className="flex flex-col items-center justify-between lg:flex-row">
           <SectionHeader
-            className="mb-0"
+            className="mb-0 lg:items-start"
             title="Aprenda e se transforme"
             description="Descubra como nossas sessões de tutoria podem ajudá-lo a ter sucesso acadêmico."
           />
