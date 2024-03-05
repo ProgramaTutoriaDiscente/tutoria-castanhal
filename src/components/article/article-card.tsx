@@ -25,7 +25,7 @@ export function ArticleCard({
           width={640}
           height={360}
           loading="lazy"
-          className="w-auto"
+          className="w-full"
         />
         <div className="p-6">
           <h3 className="text-xl font-bold">{title}</h3>
