@@ -122,8 +122,13 @@ export default async function BlogArticle({
 export async function generateMetadata({
   params: { slug },
 }: BlogArticleProps): Promise<Metadata> {
-  const data = await getArticlePage({ slug })
-  const article = data.article
+  const { article } = await getArticlePage({ slug })
+
+  if (!article) {
+    return {
+      title: 'Página não encontrada',
+    }
+  }
 
   return {
     title: article.title,
