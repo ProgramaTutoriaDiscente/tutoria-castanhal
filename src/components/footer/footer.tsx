@@ -1,135 +1,89 @@
-import {
-  InstagramLogoIcon,
-  LinkedInLogoIcon,
-  TwitterLogoIcon,
-} from '@radix-ui/react-icons'
+import { siteConfig } from '@/config/site'
+import Image from 'next/image'
 import Link from 'next/link'
-import { BsYoutube } from 'react-icons/bs'
-import { FaFacebook } from 'react-icons/fa'
+import { FaInstagram, FaLinkedin } from 'react-icons/fa'
 import { Section } from '../section/section'
-import { buttonVariants } from '../shadcn-ui/button'
+import { SectionHeader } from '../section/section-header'
+import { Button, buttonVariants } from '../shadcn-ui/button'
+import { Separator } from '../shadcn-ui/separator'
 
 export function Footer() {
   return (
-    <footer>
-      <div className="bg-secondary-foreground">
-        <Section className="">
-          <div className="flex justify-between items-start gap-4 sm:items-center flex-col sm:flex-row sm:text-start ">
-            <div className="text-background">
-              <h3 className="text-4xl font-bold">
-                Aprenda e se destaque acadêmico
-              </h3>
-              <p className="text-lg">
-                Descubra como nossas sessões de tutoria podem ajudá-lo a ter
-                sucesso acadêmico.
-              </p>
-            </div>
-            <div className="flex justify-start gap-4 pt-4 sm:justify-end sm:pt-0">
-              <Link href={'/sobre'} className={buttonVariants()}>
-                Saiba mais
-              </Link>
-              <Link
-                href={'https://google.com.br'}
-                className={buttonVariants({ variant: 'outline' })}
-              >
-                Inscreva-se
-              </Link>
-            </div>
+    <footer className="border-t">
+      <Section className="py-20">
+        <div className="flex flex-col items-center justify-between lg:flex-row">
+          <SectionHeader
+            className="mb-0 lg:items-start"
+            title="Aprenda e se transforme"
+            description="Descubra como nossas sessões de tutoria podem ajudá-lo a ter sucesso acadêmico."
+          />
+          <div className="mt-4 flex flex-row justify-center gap-4 lg:mt-0 lg:flex-col">
+            <Link href="https://google.com" className={buttonVariants()}>
+              Inscreva-se
+            </Link>
+            <Link
+              href="/sobre"
+              className={buttonVariants({ variant: 'secondary' })}
+            >
+              Saiba mais
+            </Link>
           </div>
-        </Section>
-      </div>
-      <div>
-        <Section>
-          <div>
-            <div className="two-cols justify-center text-center md:justify-between md:text-start">
-              <div className="space-y-8 text-sm">
-                <Link href="/">
-                  <span className="text-2xl font-bold">Logo</span>
-                </Link>
-                <div className=" flex flex-col gap-6">
-                  <div>
-                    <span className="font-semibold">Endereço</span>
-                    <p>Nível 1, Rua Exemplo, Sydney NSW 2000</p>
-                  </div>
-                  <div>
-                    <span className="font-semibold">Contato</span>
-                    <p className="underline">1800 123 4567</p>
-                    <p className="underline">info@relume.io</p>
-                  </div>
+        </div>
+      </Section>
 
-                  <div className="flex justify-center gap-3 md:justify-start">
-                    <Link href="#">
-                      <FaFacebook />
-                    </Link>
-                    <Link href="#">
-                      <InstagramLogoIcon />
-                    </Link>
-                    <Link href="#">
-                      <TwitterLogoIcon />
-                    </Link>
-                    <Link href="#">
-                      <LinkedInLogoIcon />
-                    </Link>
-                    <Link href="#">
-                      <BsYoutube />
-                    </Link>
-                  </div>
-                </div>
-              </div>
-              <div className="flex justify-center gap-20 pt-6 md:justify-end md:pr-20 md:pt-0">
-                <div className="space-y-3">
-                  <div className="inline-block">
-                    <Link href="#">Link</Link>
-                  </div>
-                  <div className="block">
-                    <Link href="#">Link</Link>
-                  </div>
-                  <div className="block">
-                    <Link href="#">Link</Link>
-                  </div>
-                </div>
-                <div className="space-y-3">
-                  <div className="block">
-                    <Link href="#">Link</Link>
-                  </div>
-                  <div className="block">
-                    <Link href="#">Link</Link>
-                  </div>
-                  <div className="block">
-                    <Link href="#">Link</Link>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div className="mt-10 border-t-2 pt-8 md:flex md:items-center md:justify-between">
-              <div className="text-center md:text-left">
-                <p className="text-sm text-muted-foreground">
-                  &copy; {new Date().getFullYear()} All Rights Reserved
-                </p>
-              </div>
-              <div className="mt-4 flex items-center justify-center md:mt-0">
-                <div className="flex space-x-8">
-                  <Link
-                    href="#"
-                    className="text-sm text-muted-foreground hover:text-gray-600"
+      <div className="border-t bg-secondary/30 text-muted-foreground">
+        <Section className="py-8">
+          <div className="flex flex-col items-center gap-8 sm:flex-row sm:justify-between sm:gap-0">
+            <Link href="/" className="inline-block max-w-28">
+              <Image
+                src="/logo.svg"
+                alt="Logo da Tutoria Castanhal"
+                width={112}
+                height={41}
+              />
+            </Link>
+
+            <nav className="flex items-center gap-8">
+              <Link
+                href="/sobre"
+                className="underline-offset-4 hover:underline"
+              >
+                Sobre Nós
+              </Link>
+              <Link href="/blog" className="underline-offset-4 hover:underline">
+                Blog
+              </Link>
+
+              <div className="space-x-2">
+                <Link href={siteConfig.social.instagram}>
+                  <Button
+                    size="icon"
+                    variant="ghost"
+                    className="text-muted-foreground"
                   >
-                    Terms
-                  </Link>
-                  <Link
-                    href="#"
-                    className="text-sm text-muted-foreground hover:text-gray-600"
+                    <FaInstagram className="h-5 w-5" />
+                  </Button>
+                </Link>
+                <Link href={siteConfig.social.linkedin}>
+                  <Button
+                    size="icon"
+                    variant="ghost"
+                    className="text-muted-foreground"
                   >
-                    Privacy Policy
-                  </Link>
-                  <Link
-                    href="#"
-                    className="text-sm text-muted-foreground hover:text-gray-600"
-                  >
-                    Cookie Policy
-                  </Link>
-                </div>
+                    <FaLinkedin className="h-5 w-5" />
+                  </Button>
+                </Link>
               </div>
-            </div>
+            </nav>
+          </div>
+
+          <Separator className="my-8" />
+
+          <div>
+            <p className="text-center">
+              Tutoria Castanhal &copy; {new Date().getFullYear()} - Feito por
+              Alícia e Aridan
+            </p>
           </div>
         </Section>
       </div>

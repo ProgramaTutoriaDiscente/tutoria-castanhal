@@ -14,14 +14,18 @@ export function Navbar() {
     <header className="sticky top-0 z-50 w-full border-b border-border/40 bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
       <div className="container">
         <div className="relative flex h-16 items-center justify-between">
-          <Link href="/" className="max-w-28">
+          <Link href="/" className="flex max-w-28 items-center">
             <Image
-              src="/logo.svg"
+              src="/logo1.svg"
               alt="Logo da Tutoria Castanhal"
               width={112}
               height={41}
-              className="w-full"
+              className="h-10 w-max"
             />
+            <div className="flex flex-col -space-y-2">
+              <span className="font-bold text-primary">TUTORIA</span>
+              <span className="font-medium text-foreground">CASTANHAL</span>
+            </div>
           </Link>
 
           <nav className="absolute left-1/2 hidden -translate-x-1/2 md:block">

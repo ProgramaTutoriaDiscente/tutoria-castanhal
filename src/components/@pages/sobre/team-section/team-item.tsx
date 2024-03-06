@@ -6,10 +6,10 @@ import {
 import { CarouselItem } from '@/components/shadcn-ui/carousel'
 
 interface TeamItemProps {
-  name: string,
-  avatarImage: string,
-  avatarFallback: string,
-  role: string,
+  name: string
+  avatarImage: string
+  avatarFallback: string
+  role: string
   description: string
 }
 
@@ -18,11 +18,11 @@ export function TeamItem({
   avatarImage,
   avatarFallback,
   role,
-  description
+  description,
 }: TeamItemProps) {
   return (
-    <CarouselItem className="basis-1/2 md:basis-1/3">
-      <div className='flex w-full flex-col overflow-hidden rounded-xl border bg-card p-6 text-card-foreground shadow'>
+    <CarouselItem className="basis-1/2 lg:basis-1/3">
+      <div className="flex w-full flex-col overflow-hidden rounded-xl border bg-card p-6 text-card-foreground shadow">
         <Avatar className="h-16 w-16 border-2">
           <AvatarImage src={avatarImage} />
           <AvatarFallback>{avatarFallback}</AvatarFallback>
