@@ -1,3 +1,4 @@
+import { siteConfig } from '@/config/site'
 import Image from 'next/image'
 import Link from 'next/link'
 import { Section } from '../section/section'
@@ -17,7 +18,7 @@ export function Footer() {
             description="Descubra como nossas sessões de tutoria podem ajudá-lo a ter sucesso acadêmico."
           />
           <div className="mt-4 flex flex-row justify-center gap-4 lg:mt-0 lg:flex-col">
-            <Link href="https://google.com" className={buttonVariants()}>
+            <Link href={siteConfig.form} className={buttonVariants()}>
               Inscreva-se
             </Link>
             <Link
