@@ -2,6 +2,7 @@ import { RichText } from '@/components/@pages/blog-article/rich-text'
 import { SocialShare } from '@/components/@pages/blog-article/social-share'
 import { LastNewsSection } from '@/components/@pages/home/last-news-section'
 import { Section } from '@/components/section/section'
+import { siteConfig } from '@/config/site'
 import { fetchHygraph } from '@/lib/fetch-hygraph'
 import { ArticleProps } from '@/types/article'
 import {
@@ -11,6 +12,7 @@ import {
   format,
 } from 'date-fns'
 import { Calendar } from 'lucide-react'
+import { Metadata } from 'next'
 import Image from 'next/image'
 import { notFound } from 'next/navigation'
 import { title } from 'process'
@@ -21,30 +23,34 @@ interface BlogArticleProps {
   }
 }
 
+function getArticlePage({
+  slug,
+}: {
+  slug: string
+}): Promise<{ article: ArticleProps }> {
+  const query = `query ArticlePage {
+    article(where: {slug: "${slug}"}) {
+      title
+      excerpt
+      slug
+      content {
+        raw
+      }
+      thumbnail {
+        url
+      }
+      createdAt
+      updatedAt
+    }
+  }`
+
+  return fetchHygraph(query)
+}
+
 export default async function BlogArticle({
   params: { slug },
 }: BlogArticleProps) {
-  function getArticlePage(): Promise<{ article: ArticleProps }> {
-    const query = `query ArticlePage {
-      article(where: {slug: "${slug}"}) {
-        title
-        excerpt
-        slug
-        content {
-          raw
-        }
-        thumbnail {
-          url
-        }
-        createdAt
-        updatedAt
-      }
-    }`
-
-    return fetchHygraph(query)
-  }
-
-  const { article } = await getArticlePage()
+  const { article } = await getArticlePage({ slug })
 
   if (!article) {
     return notFound()
@@ -111,4 +117,30 @@ export default async function BlogArticle({
       <LastNewsSection background="gray" />
     </>
   )
+}
+
+export async function generateMetadata({
+  params: { slug },
+}: BlogArticleProps): Promise<Metadata> {
+  const data = await getArticlePage({ slug })
+  const article = data.article
+
+  return {
+    title: article.title,
+    description: article.excerpt,
+    openGraph: {
+      images: [
+        {
+          url: article.thumbnail.url,
+          width: 1200,
+          height: 630,
+        },
+      ],
+    },
+    twitter: {
+      card: 'summary_large_image',
+      site: siteConfig.url,
+      images: article.thumbnail.url,
+    },
+  }
 }
