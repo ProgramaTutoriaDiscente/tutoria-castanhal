@@ -16,16 +16,12 @@ export function Navbar() {
         <div className="relative flex h-16 items-center justify-between">
           <Link href="/" className="flex max-w-28 items-center">
             <Image
-              src="/logo1.svg"
+              src="/logo.svg"
               alt="Logo da Tutoria Castanhal"
               width={112}
               height={41}
               className="h-10 w-max"
             />
-            <div className="flex flex-col -space-y-2">
-              <span className="font-bold text-primary">TUTORIA</span>
-              <span className="font-medium text-foreground">CASTANHAL</span>
-            </div>
           </Link>
 
           <nav className="absolute left-1/2 hidden -translate-x-1/2 md:block">
