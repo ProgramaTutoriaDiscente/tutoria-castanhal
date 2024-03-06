@@ -8,7 +8,10 @@ interface ArticleListProps {
 }
 
 export default function ArticleList({ maxLenght }: ArticleListProps) {
-  const articlesNumber = maxLenght !== undefined ? `(first: ${maxLenght})` : ''
+  const articlesNumber =
+    maxLenght !== undefined
+      ? `(orderBy: publishedAt_DESC, first: ${maxLenght})`
+      : '(orderBy: publishedAt_DESC)'
 
   const query = `query Articles {
     articles${articlesNumber} {
