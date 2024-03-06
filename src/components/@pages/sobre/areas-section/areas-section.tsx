@@ -16,19 +16,19 @@ export function AreasSection() {
       <GridWrapper>
         <AreasCard
           title="Linguagens"
-          description="Área que estuda as estruturas linguísticas, regras gramaticais e mecanismos de comunicação, a linguística é a ciência da expressão verbal e da interpretação."
+          description="Estuda diferentes tipos de textos, a produção escrita, as regras gramaticais, a compreensão de textos e a comunicação verbal."
           disciplinas="Gêneros Discursivos, Produção Textual, Gramática, Leitura e Interpretação de texto, Oralidade"
           background={CardImageLinguagens}
         />
         <AreasCard
           title="Matemática"
-          description="Área que investiga os símbolos numéricos, fórmulas e teoremas, a matemática é a ciência do raciocínio lógico e abstrato que descreve fenômenos."
-          disciplinas="Álgebra, Geometria, Trigonometria, Probabilidade, Estatística, Matemática financeira"
+          description="Focada em aspectos específicos dos números e formas, aplicados em diversos campos, como finanças, estatísticas e modelagem geométrica."
+          disciplinas="Álgebra, Geometria, Trigonometria, Probabilidade, Estatística, Matemática Financeira"
           background={CardImageMatematica}
         />
         <AreasCard
           title="Informática"
-          description="Área que estuda os fundamentos dos sistemas computacionais e algoritmos, a informática é a ciência da manipulação de dispositivos eletrônicos."
+          description="Auxilia em temas como introdução à informática, navegação na internet, uso de ferramentas do Google e plataformas acadêmicas."
           disciplinas="Introdução à Informática, Internet, Ferramentas do Google, Central Acadêmica"
           background={CardImageInformatica}
         />
