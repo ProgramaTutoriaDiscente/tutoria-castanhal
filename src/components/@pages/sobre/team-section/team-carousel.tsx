@@ -1,12 +1,17 @@
-import { Carousel, CarouselContent, CarouselNext, CarouselPrevious } from "@/components/shadcn-ui/carousel";
-import { TeamItem } from "./team-item";
-import { fetchHygraph } from "@/lib/fetch-hygraph";
-import { MemberProps } from "@/types/member";
+import {
+    Carousel,
+    CarouselContent,
+    CarouselNext,
+    CarouselPrevious,
+} from '@/components/shadcn-ui/carousel'
+import { fetchHygraph } from '@/lib/fetch-hygraph'
+import { MemberProps } from '@/types/member'
+import { TeamItem } from './team-item'
 
 export async function TeamCarousel() {
-    function getMembers(): Promise<{ members: MemberProps[] }> {
-        const query = `query Members {
-            members {
+  function getMembers(): Promise<{ members: MemberProps[] }> {
+    const query = `query Members {
+            members(orderBy: name_ASC) {
               avatar {
                 url
               }
@@ -16,29 +21,30 @@ export async function TeamCarousel() {
               role
             }
           }
+          
         `
 
-        return fetchHygraph(query)
-    }
+    return fetchHygraph(query)
+  }
 
-    const { members } = await getMembers()
+  const { members } = await getMembers()
 
-    return (
-        <Carousel className="w-full px-2">
-            <CarouselContent>
-                {members.map((item, i) => (
-                    <TeamItem
-                        name={item.name}
-                        avatarImage={item.avatar.url}
-                        avatarFallback={item.fallback}
-                        role={item.role}
-                        description={item.description}
-                        key={i}
-                    />
-                ))}
-            </CarouselContent>
-            <CarouselPrevious />
-            <CarouselNext />
-        </Carousel>
-    )
+  return (
+    <Carousel className="w-full px-2">
+      <CarouselContent>
+        {members.map((item, i) => (
+          <TeamItem
+            name={item.name}
+            avatarImage={item.avatar.url}
+            avatarFallback={item.fallback}
+            role={item.role}
+            description={item.description}
+            key={i}
+          />
+        ))}
+      </CarouselContent>
+      <CarouselPrevious />
+      <CarouselNext />
+    </Carousel>
+  )
 }
