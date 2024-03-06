@@ -2,6 +2,7 @@ import { TeamCarousel } from '@/components/@pages/sobre/team-section/team-carous
 import { Section } from '@/components/section/section'
 import { SectionHeader } from '@/components/section/section-header'
 import { Suspense } from 'react'
+import { TeamLoading } from './team-loading'
 
 export function TeamSection() {
   return (
@@ -11,7 +12,7 @@ export function TeamSection() {
         description="Conheça mais sobre a equipe do Programa de Tutoria Discente Castanhal"
       />
 
-      <Suspense fallback={<p>Carregando...</p>}>
+      <Suspense fallback={<TeamLoading />}>
         <TeamCarousel />
       </Suspense>
     </Section>
