@@ -6,10 +6,10 @@ import { siteConfig } from '@/config/site'
 import Image from 'next/image'
 import Link from 'next/link'
 import { useState } from 'react'
-import { FaInstagram, FaLinkedin } from 'react-icons/fa'
 import { RiMenu4Fill } from 'react-icons/ri'
 import { Separator } from '../shadcn-ui/separator'
 import { ThemeToggle } from '../theme/theme-toggle'
+import { Socials } from '../shared/socials'
 
 export function MobileNav() {
   const [open, setOpen] = useState(false)
@@ -56,25 +56,8 @@ export function MobileNav() {
 
           <Separator />
 
-          <div className="mt-4 flex gap-4">
-            <Link href={siteConfig.social.instagram}>
-              <Button
-                size="icon"
-                variant="ghost"
-                className="text-muted-foreground"
-              >
-                <FaInstagram className="h-6 w-6" />
-              </Button>
-            </Link>
-            <Link href={siteConfig.social.linkedin}>
-              <Button
-                size="icon"
-                variant="ghost"
-                className="text-muted-foreground"
-              >
-                <FaLinkedin className="h-6 w-6" />
-              </Button>
-            </Link>
+          <div className="mt-4 flex gap-1">
+            <Socials />
             <ThemeToggle />
           </div>
         </div>

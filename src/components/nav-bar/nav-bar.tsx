@@ -4,8 +4,7 @@ import { NavItem } from '@/components/nav-bar/nav-item'
 import { siteConfig } from '@/config/site'
 import Image from 'next/image'
 import Link from 'next/link'
-import { FaInstagram, FaLinkedin } from 'react-icons/fa'
-import { Button } from '../shadcn-ui/button'
+import { Socials } from '../shared/socials'
 import { ThemeToggle } from '../theme/theme-toggle'
 import { MobileNav } from './mobile-nav'
 
@@ -32,24 +31,7 @@ export function Navbar() {
 
           <div>
             <div className="hidden items-center gap-1 md:flex">
-              <Link href={siteConfig.social.instagram}>
-                <Button
-                  size="icon"
-                  variant="ghost"
-                  className="text-muted-foreground"
-                >
-                  <FaInstagram className="h-5 w-5" />
-                </Button>
-              </Link>
-              <Link href={siteConfig.social.linkedin}>
-                <Button
-                  size="icon"
-                  variant="ghost"
-                  className="text-muted-foreground"
-                >
-                  <FaLinkedin className="h-5 w-5" />
-                </Button>
-              </Link>
+              <Socials />
               <ThemeToggle />
             </div>
             <MobileNav />

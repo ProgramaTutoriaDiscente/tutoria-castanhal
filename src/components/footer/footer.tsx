@@ -1,11 +1,10 @@
-import { siteConfig } from '@/config/site'
 import Image from 'next/image'
 import Link from 'next/link'
-import { FaInstagram, FaLinkedin } from 'react-icons/fa'
 import { Section } from '../section/section'
 import { SectionHeader } from '../section/section-header'
-import { Button, buttonVariants } from '../shadcn-ui/button'
+import { buttonVariants } from '../shadcn-ui/button'
 import { Separator } from '../shadcn-ui/separator'
+import { Socials } from '../shared/socials'
 
 export function Footer() {
   return (
@@ -54,26 +53,7 @@ export function Footer() {
                 Blog
               </Link>
 
-              <div className="space-x-2">
-                <Link href={siteConfig.social.instagram}>
-                  <Button
-                    size="icon"
-                    variant="ghost"
-                    className="text-muted-foreground"
-                  >
-                    <FaInstagram className="h-5 w-5" />
-                  </Button>
-                </Link>
-                <Link href={siteConfig.social.linkedin}>
-                  <Button
-                    size="icon"
-                    variant="ghost"
-                    className="text-muted-foreground"
-                  >
-                    <FaLinkedin className="h-5 w-5" />
-                  </Button>
-                </Link>
-              </div>
+              <Socials />
             </nav>
           </div>
 
