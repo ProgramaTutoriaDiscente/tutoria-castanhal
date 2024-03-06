@@ -14,7 +14,7 @@ export default function Blog() {
     <>
       <PageHeader
         title="Blog"
-        description="Explore nosso blog e descubra sobre dicas de estudos e oficinas ofertadas pelo PTD."
+        description="Explore nosso blog e descubra sobre dicas de estudos e oficinas ofertadas pelo Programa de Tutoria Discente."
       />
 
       <Section>

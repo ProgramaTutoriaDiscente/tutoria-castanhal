@@ -15,7 +15,7 @@ export default function Sobre() {
     <>
       <PageHeader
         title="Sobre o Projeto de Tutoria"
-        description="Nossa missão é ajudar estudantes a superar os desafios acadêmicos que enfrentam ao longo de sua jornada educacional e alcançar seu pleno potencial, desenvolvendo habilidades e competências que serão fundamentais para o seu sucesso futuro."
+        description="Nossa missão é ajudar estudantes a superar os desafios acadêmicos que enfrentam ao longo de sua jornada educacional e desenvolver habilidades e competências fundamentais para o seu futuro."
       />
 
       <AreasSection />
