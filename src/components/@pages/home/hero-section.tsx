@@ -1,5 +1,6 @@
 import { Section } from '@/components/section/section'
 import { buttonVariants } from '@/components/shadcn-ui/button'
+import { siteConfig } from '@/config/site'
 import Image from 'next/image'
 import Link from 'next/link'
 import HeroSectionImage from '../../../../public/images/hero-section-image.jpg'
@@ -17,12 +18,7 @@ export function HeroSection() {
             aprendizagem de conceitos fundamentais para a faculdade.
           </p>
           <div className="space-x-4">
-            <Link
-              href={
-                'https://docs.google.com/forms/d/e/1FAIpQLSdle9P_0kVByW5itjUESMdsMecKLXeBQb_aEoMextOO52lj2A/viewform?pli=1'
-              }
-              className={buttonVariants()}
-            >
+            <Link href={siteConfig.form} className={buttonVariants()}>
               Inscreva-se
             </Link>
             <Link

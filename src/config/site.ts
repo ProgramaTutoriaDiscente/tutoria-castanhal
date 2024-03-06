@@ -14,4 +14,5 @@ export const siteConfig = {
     linkedin:
       'https://www.linkedin.com/company/tutoria-discente-castanhal/mycompany/',
   },
+  form: 'https://docs.google.com/forms/d/e/1FAIpQLSdle9P_0kVByW5itjUESMdsMecKLXeBQb_aEoMextOO52lj2A/viewform?pli=1',
 }

@@ -18,7 +18,6 @@ export function AreasCard({ title, description, background }: AreasCardProps) {
           loading="lazy"
           placeholder="blur"
           className="absolute -z-10"
-          fill={true}
         />
         <div className="absolute bottom-0 space-y-2 p-6 text-background">
           <h3 className="text-2xl font-bold sm:text-3xl">{title}</h3>

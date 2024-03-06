@@ -6,6 +6,8 @@ import {
   AccordionItem,
   AccordionTrigger,
 } from '@/components/shadcn-ui/accordion'
+import { siteConfig } from '@/config/site'
+import Link from 'next/link'
 
 export function FaqSection() {
   return (
@@ -26,7 +28,9 @@ export function FaqSection() {
             Como funciona o projeto?
           </AccordionTrigger>
           <AccordionContent>
-            Yes. It adheres to the WAI-ARIA design pattern.
+            A equipe do PTD é formada por discentes mais experientes
+            responsáveis por ensinar a base de matemática, informática e
+            linguagens para o seu curso
           </AccordionContent>
         </AccordionItem>
         <AccordionItem value="item-2">
@@ -34,8 +38,8 @@ export function FaqSection() {
             Como posso me beneficiar?
           </AccordionTrigger>
           <AccordionContent>
-            Yes. It comes with default styles that matches the other
-            components&apos; aesthetic.
+            Se você tem dificuldades acadêmicas, o Programa de Tutoria Discente
+            pode te ajudar a revisar assuntos importantes e aprender
           </AccordionContent>
         </AccordionItem>
         <AccordionItem value="item-3">
@@ -43,8 +47,7 @@ export function FaqSection() {
             Quem pode participar?
           </AccordionTrigger>
           <AccordionContent>
-            Yes. It&apos;s animated by default, but you can disable it if you
-            prefer.
+            Qualquer discente pode participar do projeto
           </AccordionContent>
         </AccordionItem>
         <AccordionItem value="item-4">
@@ -52,8 +55,8 @@ export function FaqSection() {
             Como me inscrevo?
           </AccordionTrigger>
           <AccordionContent>
-            Yes. It&apos;s animated by default, but you can disable it if you
-            prefer.
+            Para se inscrever basta acessar o formulário disponibilizado{' '}
+            <Link href={siteConfig.form}>neste link</Link>
           </AccordionContent>
         </AccordionItem>
         <AccordionItem value="item-5">
@@ -61,8 +64,7 @@ export function FaqSection() {
             Qual é o custo?
           </AccordionTrigger>
           <AccordionContent>
-            Yes. It&apos;s animated by default, but you can disable it if you
-            prefer.
+            Nenhum! O custo para participar das aulas e oficinas é zero.
           </AccordionContent>
         </AccordionItem>
       </Accordion>
