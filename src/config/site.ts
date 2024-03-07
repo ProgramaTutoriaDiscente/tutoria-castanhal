@@ -14,5 +14,5 @@ export const siteConfig = {
     whatsapp:
       'https://api.whatsapp.com/send/?phone=5591991446989&text&type=phone_number',
   },
-  form: 'https://docs.google.com/forms/d/e/1FAIpQLSdle9P_0kVByW5itjUESMdsMecKLXeBQb_aEoMextOO52lj2A/viewform?pli=1',
+  form: 'https://forms.gle/wA6vt3HJTtULe3ge7',
 }
