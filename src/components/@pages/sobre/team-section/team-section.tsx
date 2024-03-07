@@ -9,7 +9,7 @@ export function TeamSection() {
     <Section background="gray">
       <SectionHeader
         title="Nossa equipe"
-        description="Conheça mais sobre a equipe do Programa de Tutoria Discente Castanhal"
+        description="Conheça mais sobre a equipe do Programa de Tutoria Discente Castanhal."
       />
 
       <Suspense fallback={<TeamLoading />}>

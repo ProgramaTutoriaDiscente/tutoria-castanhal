@@ -11,7 +11,7 @@ export function AreasSection() {
     <Section>
       <SectionHeader
         title="Áreas"
-        description="Saiba em quais áreas podemos ajudar os estudantes com dificuldades acadêmicas"
+        description="Saiba em quais áreas podemos ajudar os estudantes com dificuldades acadêmicas."
       />
       <GridWrapper>
         <AreasCard
