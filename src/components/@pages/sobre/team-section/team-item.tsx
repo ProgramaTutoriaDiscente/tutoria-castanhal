@@ -21,7 +21,7 @@ export function TeamItem({
   description,
 }: TeamItemProps) {
   return (
-    <CarouselItem className="basis-1/2 lg:basis-1/3">
+    <CarouselItem className="basis-full sm:basis-1/2 lg:basis-1/3">
       <div className="flex w-full flex-col overflow-hidden rounded-xl border bg-card p-6 text-card-foreground shadow">
         <Avatar className="h-16 w-16 border-2">
           <AvatarImage src={avatarImage} />
