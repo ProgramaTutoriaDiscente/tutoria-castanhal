@@ -23,18 +23,18 @@ export function AreasCard({
 }: AreasCardProps) {
   return (
     <div className="w-full overflow-hidden rounded-2xl border shadow">
-      <div className="relative h-[256px] sm:h-[364px]">
-        <div className="absolute bottom-0 left-0 right-0 top-0 bg-gradient-to-t from-card-foreground to-transparent" />
+      <div className="relative h-[256px] sm:h-[364px] bg-card-foreground">
+        <div className=" " />
         <Image
           src={background}
           alt="imagem ilustrativa"
           loading="lazy"
           placeholder="blur"
-          className="absolute -z-10"
+          className="absolute h-[40%] object-cover object-top"
         />
-        <div className="absolute bottom-0 space-y-3 p-6 text-background">
+        <div className="absolute bottom-0 space-y-3 p-6">
           <h3 className="text-2xl font-bold sm:text-3xl">{title}</h3>
-          <p className="text-sm">{description}</p>
+          <p className="text-sm text-muted-foreground">{description}</p>
           <Dialog>
             <DialogTrigger>
               <div className="flex gap-1">
