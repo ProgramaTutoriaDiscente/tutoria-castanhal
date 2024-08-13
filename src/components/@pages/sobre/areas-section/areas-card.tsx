@@ -24,7 +24,7 @@ export function AreasCard({
   return (
     <div className="w-full overflow-hidden rounded-2xl border shadow">
       <div className="relative h-[256px] sm:h-[364px]">
-        <div className="absolute bottom-0 left-0 right-0 top-0 bg-gradient-to-t from-foreground to-transparent" />
+        <div className="absolute bottom-0 left-0 right-0 top-0 bg-gradient-to-t from-card-foreground to-transparent" />
         <Image
           src={background}
           alt="imagem ilustrativa"
